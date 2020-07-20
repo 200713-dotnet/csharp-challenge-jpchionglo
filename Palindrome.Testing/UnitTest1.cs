@@ -10,7 +10,6 @@ namespace Palindrome.Testing
         [InlineData("abCDEEdcBa")] //check if case is ignored
         [InlineData("#de!ed#")] //check symbols
         [InlineData("abc32123cba")] //check alphanumeric
-        [InlineData("NasCar")] //check fail
 
         public void Test1(string test)
         {
@@ -18,7 +17,6 @@ namespace Palindrome.Testing
           var testWord = test;
 
           Assert.True(Program.CheckPalindrome(testWord));
-          //Expect 4 pass, 1 fail
 
         }
     }
