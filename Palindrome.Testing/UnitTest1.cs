@@ -9,14 +9,16 @@ namespace Palindrome.Testing
         [InlineData("racecar")] //standard test
         [InlineData("abCDEEdcBa")] //check if case is ignored
         [InlineData("#de!ed#")] //check symbols
+        [InlineData("abc32123cba")] //check alphanumeric
         [InlineData("NasCar")] //check fail
+
         public void Test1(string test)
         {
           var pal = new Program();
           var testWord = test;
 
           Assert.True(Program.CheckPalindrome(testWord));
-          //Expect 3 pass, 1 fail
+          //Expect 4 pass, 1 fail
 
         }
     }
